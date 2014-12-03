@@ -14,8 +14,8 @@
 \setboolean{prof}{true}
 
 \newif\ifprof
-%\proftrue
-\proffalse
+\proftrue
+%\proffalse
 
 \newboolean{td}
 \setboolean{td}{true}
@@ -192,29 +192,47 @@ Le fonctionnement électromécanique des deux moteurs est décrit par les équat
 \item $e(t)=k_E \cdot \omega_m (t)$ avec $k_E=5,77 \; \text{Vs/rad}$ (constante électrique d’un moteur).
 \end{itemize}
 
-L’application des théorèmes de la dynamique permet d’écrire que : 
-$$ 2\cdot c_m (t)-c_r (t)=J\omega_m (t)+f\cdot \omega_m (t)$$
+L’application des théorèmes de la dynamique permet d’écrire l'équation suivante : 
+$$ 2\cdot c_m (t)-c_r (t)=J\dfrac{d\omega_m (t)}{dt}+f\cdot \omega_m (t)$$
 
 L’application de la loi des mailles dans le schéma électrique se traduit par l’équation suivante :
 $$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
 
 
+\fi
+
 \subparagraph{}
 \textit{Exprimer chacune des 4 équations dans le domaine de Laplace.}
 \ifprof
 \begin{corrige}
+\begin{enumerate}
+\item $C_m (p)=k_T \cdot I(p)$
+\item $E(p)=k_E \cdot \Omega_m (p)$
+\item $ 2\cdot C_m (p)-C_r (p)=Jp\Omega_m (p)+f\cdot \Omega_m (p)$
+\item $U(p)=E(p)+RI(p)+L p I(p)$
+\end{enumerate}
 \end{corrige}
 \else
 \fi
 
+\ifprof
+\else
 \begin{center}
 \includegraphics[width=.9\textwidth]{images/SchemaBloc_01}
 \end{center}
+\fi
 
 \subparagraph{}
 \textit{Exprimer les fonctions de transfert $G_1(p)$, $G_2(p)$, $G_3(p)$ et $G_4(p)$.}
 \ifprof
 \begin{corrige}
+On a :
+\begin{enumerate}
+\item $G_1(p)= \dfrac{1}{R+Lp}$
+\item $G_2(p) = k_T$
+\item $G_3(p)=\dfrac{1}{Jp+f}$
+\item $G_4(p) = k_E$
+\end{enumerate}
 \end{corrige}
 \else
 \fi
@@ -225,6 +243,8 @@ $$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
 \subparagraph{}\textit{Calculer la fonction de transfert $F_1 (p)=\dfrac{\Omega_m (p)}{U(p)}$ en fonction de $G_1(p)$, $G_2(p)$, $G_3(p)$, $G_4 (p)$.}
 \ifprof
 \begin{corrige}
+On calcule la fonction de transfert en boucle fermée :
+$$F_1 (p)=\dfrac{\Omega_m (p)}{U(p)} = \dfrac{2\cdot G_1(p)\cdot G_2(p)\cdot G_3(p)}{1+2\cdot G_1(p)\cdot G_2(p)\cdot G_3(p)\cdot G_4(p)} $$
 \end{corrige}
 \else
 \fi
@@ -234,6 +254,9 @@ $$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
 \textit{Retracer le schéma bloc.}
 \ifprof
 \begin{corrige}
+\begin{center}
+\includegraphics[width=8cm]{images/corr_01}
+\end{center}
 \end{corrige}
 \else
 \fi
@@ -243,6 +266,7 @@ $$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
 
 \ifprof
 \begin{corrige}
+$$F_2 (p)=\dfrac{\Omega_m (p)}{C_r (p)} = -\dfrac{G_3(p)}{1+2\cdot G_1(p)\cdot G_2(p)\cdot G_3(p)\cdot G_4(p)}$$
 \end{corrige}
 \else
 \fi
@@ -253,12 +277,15 @@ $$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
 \textit{Exprimer $\Omega_m(p)$ en fonction de $F_1 (p)$, $F_2 (p)$, $C_r (p)$ et $U(p)$.}
 \ifprof
 \begin{corrige}
+Par superposition, on a :
+$$\Omega_m(p) = F_1(p) U(p) + F_2(p) C_r(p)$$
 \end{corrige}
 \else
 \fi
 
 \subsection*{Modélisation des deux moteurs à courant continu}
-
+\ifprof
+\else
 \vspace{.25cm}
 
 \begin{minipage}[c]{.4\linewidth}
@@ -284,12 +311,20 @@ La motorisation modélisée ci-dessus est insérée dans une boucle d’asservis
 \end{center}
 
 
-La consigne de vitesse $v_c(t)$ est donnée en entrée. Elle est convertie en une tension $\rho_c(t)$ avec le gain $F$. Une génératrice tachymétrique de gain $\mu =0,716 \; \text{V}\cdot \text{s/rad}$ transforme la vitesse de rotation $\omega_m(t)$ du moteur en une tension $\rho_m(t)$. Un correcteur de fonction de transfert $C(p)$ corrige la différence $\varepsilon (t)= \rho_c(t) -  \rho_m(t)$ et l’envoie à un amplificateur de gain $A$, qui alimente les deux moteurs électriques. La vitesse de rotation des moteurs $\omega_m(t)$ est transformée en vitesse du téléphérique $v(t)$ avec le gain $E$.
+La consigne de vitesse $v_c(t)$ est donnée en entrée. Elle est convertie en une tension $\rho_c(t)$ avec le gain $F$. Une génératrice tachymétrique de gain $\mu =0,716 \; \text{V}\cdot \text{s/rad}$ transforme la vitesse de rotation $\omega_m(t)$ du moteur en une tension $\rho_m(t)$. Un correcteur de fonction de transfert $C(p)$ corrige la différence $\varepsilon (t)= \rho_c(t) -  \rho_m(t)$ et l’envoie à un amplificateur de gain $A$, qui alimente les deux moteurs électriques. La vitesse de rotation des moteurs $\omega_m(t)$ est transformée en vitesse du téléphérique $v(t)$ avec le gain $E$ via :
+\begin{itemize}
+\item un réducteur de rapport de transmission $\dfrac{\omega_p(t)}{\omega_m(t)} = k =\dfrac{1}{20}$;
+\item l'arbre du réducteur
+est relié à une poulie motrice (tournant à une vitesse $\omega_m(t)$ de diamètre $D=4\;m$ (voir schéma de la salle des machines).
+\end{itemize}
+
+\fi
 
 \subparagraph{}
 \textit{Déterminer l’expression du gain $E$. Faire une application numérique.}
 \ifprof
 \begin{corrige}
+On a $v(t)=\omega_m(t) \cdot \dfrac{1}{k}\cdot\dfrac{D}{2}$. En conséquence, $E = \dfrac{v(t)}{\omega_m(t)} = \dfrac{D}{2k} = 0,1 \; \text{m}$.
 \end{corrige}
 \else
 \fi
@@ -298,12 +333,25 @@ La consigne de vitesse $v_c(t)$ est donnée en entrée. Elle est convertie en un
 
 \subparagraph{}
 \textit{Déterminer l’expression du gain $F$ pour que $\varepsilon (t)=0$ entraîne $v_c(t)=v(t)$. Faire une application numérique.}
+
 \ifprof
 \begin{corrige}
+En modifiant la position du point de prélèvement, il vient :
+\begin{center}
+\includegraphics[width=14cm]{images/corr_02}
+\end{center}
+
+On peut donc exprimer $\varepsilon(p) = V_c(p)\cdot F(p) - V(p)\cdot \dfrac{\mu}{E}$. 
+
+
+Si $\varepsilon (t)=0 \Rightarrow v_c(t)=v(t)$ alors, $ F(p) - \cdot \dfrac{\mu}{E} = 0$ et donc $F(p) = \dfrac{\mu}{E} = 7,16\; \text{V}\cdot \text{s/m}$.
+
 \end{corrige}
 \else
 \fi
 
+
+\vspace{0.5cm}
 
 On considère que $C_r (p)=0$ et $A\cdot C(p)=1$. On réalise les applications numériques. Le schéma bloc peut alors se mettre sous la forme : 
 $$
@@ -317,9 +365,11 @@ On sollicite le système avec en entrée un échelon unitaire. C’est-à-dire q
 
 
 \subparagraph{}
-\textit{Calculer $V(p)$ puis $V_c (p)$. }
+\textit{Calculer $V_c(p)$ puis $V (p)$. }
 \ifprof
 \begin{corrige}
+Si $v_c(t)$ est un échelon unitaire alors $V_c(p)=\dfrac{1}{p}$. 
+On a donc $V(p)=\dfrac{1}{p}\cdot H(p) $.
 \end{corrige}
 \else
 \fi
@@ -327,9 +377,14 @@ On sollicite le système avec en entrée un échelon unitaire. C’est-à-dire q
 
 
 \subparagraph{}
-\textit{Déterminer la valeur finale de $v(t)$ en fonction de $A$. }
+\textit{Déterminer la valeur finale de $v(t)$ en fonction de $A$ et des autres constantes. }
 \ifprof
 \begin{corrige}
+D'après le théorème de la valeur finale, on a : 
+$$
+\lim\limits_{t\to +\infty} v(t)= 
+\lim\limits_{p\to 0} p\cdot V(p)= \dfrac{AK_1}{1+K_1A}
+$$
 \end{corrige}
 \else
 \fi
@@ -340,6 +395,12 @@ On sollicite le système avec en entrée un échelon unitaire. C’est-à-dire q
 \textit{Si tel n’est pas le cas, calculer $A$ pour que la valeur finale de $v(t)$ soit 1.}
 \ifprof
 \begin{corrige}
+Une valeur finale de 1 permet de satisfaire l'exigence d'avoir un écart statique nul.
+$$
+\dfrac{AK_1}{1+K_1A} = 1 
+\Longleftrightarrow AK_1 = 1+K_1A
+$$
+
 \end{corrige}
 \else
 \fi
@@ -350,6 +411,7 @@ On sollicite le système avec une entrée en rampe de pente 1.
 \textit{Montrer que $V(p)$ peut se mettre sous la forme $\dfrac{H(p)}{p^2}$. }
 \ifprof
 \begin{corrige}
+La fonction de transfert d'une rampe de pente 1 est égale à $V_c(p)=\dfrac{1}{p^2}$
 \end{corrige}
 \else
 \fi
