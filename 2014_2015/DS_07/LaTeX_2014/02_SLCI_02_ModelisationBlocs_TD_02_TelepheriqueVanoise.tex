@@ -1,0 +1,373 @@
+\documentclass[10pt]{article}
+\input{style/coursHeadings}
+\input{style/programHeadings}
+\input{style/macros_SII}
+\input{style/macros_Titres}
+\input{style/macros_Frames}
+
+%Si le boolen xp est vrai : compilation pour xabi
+%Sinon compilation Damien
+\newboolean{xp}
+\setboolean{xp}{true}
+
+\newboolean{prof}
+\setboolean{prof}{true}
+
+\newif\ifprof
+%\proftrue
+\proffalse
+
+\newboolean{td}
+\setboolean{td}{true}
+
+\usepackage[%
+    pdftitle={},
+    pdfauthor={Xavier Pessoles},
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=magenta]{hyperref}
+
+\def\discipline{Sciences Industrielles de l'Ingénieur}
+
+\def\xxtitre{\ifthenelse{\boolean{xp}}{CI 2 -- SLCI : Systèmes Linéaires Continus et Invariants -- Analyser, Modéliser, Résoudre}{}}
+
+\def\xxsoustitre{\ifthenelse{\boolean{xp}}{
+Chapitre 3 -- Modélisation des SLCI par Schémas Blocs}{
+}}
+
+
+\def\xxauteur{\ifthenelse{\boolean{xp}}{
+\noindent Xavier \textsc{Pessoles}}{
+}}
+
+
+\def\xxpied{\ifthenelse{\boolean{xp}}{
+CI 2 : SLCI \\
+Ch 3 : Modélisation par schémas blocs -- TD -- \ifthenelse{\boolean{prof}}{P}{E}%
+}{
+}}
+
+\def\xxcathegorie{\ifthenelse{\boolean{xp}}{
+2013 -- 2014 \\
+Xavier \textsc{Pessoles}}{
+Informatique - Cours}}
+
+
+
+
+
+%---------------------------------------------------------------------------
+
+
+\begin{document}
+
+\ifthenelse{\boolean{xp}}{\input{style/enteteXP}}{\input{style/enteteDI}}
+
+
+
+%\renewcommand{\baselinestretch}{1.2}
+%\setlength{\parskip}{2ex plus 0.5ex minus 0.2ex}
+
+
+
+\begin{comp}
+\noindent \textbf{Modéliser :} un système étant fourni, et les exigences définies, l’étudiant doit être capable de proposer un modèle de connaissance du système ou partie du système à partir des lois physiques.
+
+\noindent \textit{Mod2 -- C2.2} Représentation par fonction de transfert (formalisme de Laplace).
+
+\noindent \textbf{Résoudre :} à partir des modèles retenus, mettre en œuvre une méthode de résolution.
+ 
+\noindent \textit{Rés -- C5.1 :} Simplification d’un schéma bloc : déplacement d’un sommateur, déplacement d’un point de prélèvement.
+\end{comp}
+
+\section*{Téléphérique Vanoise Express}
+
+\begin{flushright}
+\textit{D'après concours E3A -- PSI -- 2014.}
+\end{flushright}
+
+\ifprof
+\else
+
+\begin{minipage}[c]{.8\linewidth}
+Les ingénieurs du MIT ont mis au point une prothèse active permettant aux personnes amputées en dessous du genou d'avoir une marche s'approchant d'une marche d'une personne valide. 
+\begin{obj} 
+Dans le but de dimensionner le vérin à utiliser sur la prothèse, on cherche à dimensionner sa course utile. Par ailleurs, la connaissance du modèle mécanique de transmission est nécessaire afin de renseigner un modèle multiphysique. 
+\end{obj}
+
+ On donne un extrait du cahier des charges.
+ 
+\end{minipage} \hfill
+\begin{minipage}[c]{.15\linewidth}
+\begin{center}
+%\includegraphics[width=\textwidth]{images/prot_01}
+\end{center}
+\end{minipage}
+
+\begin{minipage}[c]{.33\linewidth}
+\begin{center}
+%\includegraphics[width=\textwidth]{images/uc}
+
+\textit{Diagramme de cas des utilisations}
+\end{center}
+\end{minipage} \hfill
+\begin{minipage}[c]{.63\linewidth}
+\begin{center}
+%\includegraphics[width=\textwidth]{images/exigences}
+
+\textit{Diagramme d'exigences}
+\end{center}
+\end{minipage}
+
+\vspace{.25cm}
+
+La structure interne du système est donnée par les figures ci-contre. Le paramétrage géométrique est donné ci-dessous.
+
+\vspace{.25cm}
+
+
+
+
+\subsection*{Modélisation du moteur électrique à courant continu}
+On notera :
+\begin{itemize}
+\item $F(p)$ la transformée de Laplace d’une fonction du temps $f(t)$;
+\item $u(t)$ : la tension d’alimentation des moteurs ;
+\item $i(t)$ : l’intensité traversant un moteur ;
+\item $e(t)$ : la force contre électromotrice d’un moteur ;
+\item $\omega_m (t)$ : vitesse de rotation d’un moteur ;
+\item $c_m (t)$ : couple d’un seul moteur ;
+\item $c_r (t)$ : couple de perturbation engendré par le poids du téléphérique dans une pente et par l’action du vent, ramené sur l’axe des moteurs.	 
+\end{itemize}
+
+
+Hypothèses : on suppose les conditions initiales nulles et que les deux moteurs fonctionnent de manière parfaitement identique. 
+
+
+On note : 
+\begin{minipage}[c]{.49\linewidth}
+\begin{itemize}
+\item $L=0,59 \; \text{mH}$, inductance d’un moteur ;
+\item $R=0,0386 \; \Omega$ : résistance interne d'un moteur ;
+\item $f=6 \; \text{N}\cdot \text{m}\cdot \text{s/rad}$ : coefficient de frottement visqueux équivalent ramené sur l’axe des moteurs;
+\item $J=800 \; \text{kg}\cdot \text{m}^2$ : moment d’inertie total des pièces en rotation, ramené sur l’axe des moteurs.
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[c]{.49\linewidth}
+\begin{center}
+\includegraphics[width=.8\textwidth]{images/SchemaElectrique}
+
+\textit{Schéma électrique du moteur à courant continu}
+
+\end{center}
+\end{minipage}
+
+\vspace{.25cm}
+Le fonctionnement électromécanique des deux moteurs est décrit par les équations suivantes :
+\begin{itemize}
+\item $c_m (t)=k_T \cdot i(t)$ avec $k_T=5,67 \;\text{Nm/A}$ (constante de couple d’un moteur) ;
+\item $e(t)=k_E \cdot \omega_m (t)$ avec $k_E=5,77 \; \text{Vs/rad}$ (constante électrique d’un moteur).
+\end{itemize}
+
+L’application des théorèmes de la dynamique permet d’écrire que : 
+$$ 2\cdot c_m (t)-c_r (t)=J\omega_m (t)+f\cdot \omega_m (t)$$
+
+L’application de la loi des mailles dans le schéma électrique se traduit par l’équation suivante :
+$$u(t)=e(t)+Ri(t)+L \cdot \dfrac{di(t)}{dt}$$
+
+
+\subparagraph{}
+\textit{Exprimer chacune des 4 équations dans le domaine de Laplace.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\begin{center}
+\includegraphics[width=.9\textwidth]{images/SchemaBloc_01}
+\end{center}
+
+\subparagraph{}
+\textit{Exprimer les fonctions de transfert $G_1(p)$, $G_2(p)$, $G_3(p)$ et $G_4(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subsubsection*{On considère que $C_r (p)=0$ et $U(p)\neq 0$.}
+
+\subparagraph{}\textit{Calculer la fonction de transfert $F_1 (p)=\dfrac{\Omega_m (p)}{U(p)}$ en fonction de $G_1(p)$, $G_2(p)$, $G_3(p)$, $G_4 (p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsubsection*{On considère que $C_r (p)\neq0$ et $U(p)=0$.}
+\subparagraph{}
+\textit{Retracer le schéma bloc.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subparagraph{}
+\textit{Calculer la fonction de transfert $F_2 (p)=\dfrac{\Omega_m (p)}{C_r (p)}$ en fonction de $G_1(p)$, $G_2(p)$, $G_3(p)$, $G_4 (p)$.}
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsubsection*{On considère que $C_r (p)\neq0$ et $U(p)\neq0$.}
+
+\subparagraph{}
+\textit{Exprimer $\Omega_m(p)$ en fonction de $F_1 (p)$, $F_2 (p)$, $C_r (p)$ et $U(p)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+\subsection*{Modélisation des deux moteurs à courant continu}
+
+\vspace{.25cm}
+
+\begin{minipage}[c]{.4\linewidth}
+Dans certaines conditions particulières, il est possible de mettre le moteur sous la forme ci-dessous avec :
+\begin{itemize}
+\item $B=297,4\; \text{N}\cdot \text{m⁄V}$;
+\item $D=5,8\;10^{-4} \;  \text{rad⁄s}\cdot \text{N}\cdot\text{m}$;
+\item $T=0,47\;\text{s}$.
+\end{itemize}
+\end{minipage}\hfill
+\begin{minipage}[c]{.59\linewidth}
+\begin{center}
+\includegraphics[width=.9\textwidth]{images/SchemaBloc_02}
+\end{center}
+\end{minipage}
+
+\vspace{.25cm}
+
+La motorisation modélisée ci-dessus est insérée dans une boucle d’asservissement.
+
+\begin{center}
+\includegraphics[width=\textwidth]{images/SchemaBloc_03}
+\end{center}
+
+
+La consigne de vitesse $v_c(t)$ est donnée en entrée. Elle est convertie en une tension $\rho_c(t)$ avec le gain $F$. Une génératrice tachymétrique de gain $\mu =0,716 \; \text{V}\cdot \text{s/rad}$ transforme la vitesse de rotation $\omega_m(t)$ du moteur en une tension $\rho_m(t)$. Un correcteur de fonction de transfert $C(p)$ corrige la différence $\varepsilon (t)= \rho_c(t) -  \rho_m(t)$ et l’envoie à un amplificateur de gain $A$, qui alimente les deux moteurs électriques. La vitesse de rotation des moteurs $\omega_m(t)$ est transformée en vitesse du téléphérique $v(t)$ avec le gain $E$.
+
+\subparagraph{}
+\textit{Déterminer l’expression du gain $E$. Faire une application numérique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{Déterminer l’expression du gain $F$ pour que $\varepsilon (t)=0$ entraîne $v_c(t)=v(t)$. Faire une application numérique.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+On considère que $C_r (p)=0$ et $A\cdot C(p)=1$. On réalise les applications numériques. Le schéma bloc peut alors se mettre sous la forme : 
+$$
+H(p)=\dfrac{V(p)}{V_c (p)}= \dfrac{\dfrac{AK_1}{1+K_1A}}{1+\dfrac{T}{1+K_1A} p}
+$$
+
+Avec 
+$K_1=0,123 \;\text{SI}$ et $T=0,47\;\text{s}$.
+
+On sollicite le système avec en entrée un échelon unitaire. C’est-à-dire que $v_c(t)$ est un échelon unitaire. 
+
+
+\subparagraph{}
+\textit{Calculer $V(p)$ puis $V_c (p)$. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{Déterminer la valeur finale de $v(t)$ en fonction de $A$. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{Si tel n’est pas le cas, calculer $A$ pour que la valeur finale de $v(t)$ soit 1.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+On sollicite le système avec une entrée en rampe de pente 1. 
+
+\subparagraph{}
+\textit{Montrer que $V(p)$ peut se mettre sous la forme $\dfrac{H(p)}{p^2}$. }
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{Déterminer la valeur finale, la valeur initiale et la tangente à l’origine de $v(t)$ en fonction de $A$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+\subparagraph{}
+\textit{Mettre $V(p)$ sous la forme suivante : }
+$$
+V(p)=\dfrac{A}{p}+\dfrac{B}{p^2} +\dfrac{C}{}
+$$
+
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+\subparagraph{}
+\textit{Déterminer $v(t)$.}
+\ifprof
+\begin{corrige}
+\end{corrige}
+\else
+\fi
+
+
+
+
+
+\end{document}
+
+
