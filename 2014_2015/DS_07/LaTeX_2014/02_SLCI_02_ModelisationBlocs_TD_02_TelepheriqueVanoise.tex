@@ -80,7 +80,7 @@ Informatique - Cours}}
 \noindent \textit{Rés -- C5.1 :} Simplification d’un schéma bloc : déplacement d’un sommateur, déplacement d’un point de prélèvement.
 \end{comp}
 
-\section*{Téléphérique Vanoise Express}
+\section{Téléphérique Vanoise Express}
 
 \begin{flushright}
 \textit{D'après concours E3A -- PSI -- 2014.}
@@ -98,13 +98,13 @@ Le but de ces travaux est de vérifier que, conformément au cahier des charges,
  On donne un extrait du cahier des charges.
  
 \end{minipage} \hfill
-\begin{minipage}[c]{.15\linewidth}
+\begin{minipage}[c]{.19\linewidth}
 \begin{center}
 \includegraphics[width=\textwidth]{images/ve}
 \end{center}
 \end{minipage}
 
-\begin{minipage}[c]{.15\linewidth}
+\begin{minipage}[c]{.19\linewidth}
 \begin{center}
 \includegraphics[width=\textwidth]{images/uc}
 
@@ -148,10 +148,12 @@ On donne deux schémas de principe illustrant le fonctionnement d'une ligne de t
 \end{minipage}
 \vspace{.25cm}
 
+\fi
 
 
-
-\subsection*{Modélisation du moteur électrique à courant continu}
+\subsection{Modélisation du moteur électrique à courant continu}
+\ifprof
+\else
 On notera :
 \begin{itemize}
 \item $F(p)$ la transformée de Laplace d’une fonction du temps $f(t)$;
@@ -238,7 +240,7 @@ On a :
 \fi
 
 
-\subsubsection*{On considère que $C_r (p)=0$ et $U(p)\neq 0$.}
+\subsubsection{On considère que $C_r (p)=0$ et $U(p)\neq 0$.}
 
 \subparagraph{}\textit{Calculer la fonction de transfert $F_1 (p)=\dfrac{\Omega_m (p)}{U(p)}$ en fonction de $G_1(p)$, $G_2(p)$, $G_3(p)$, $G_4 (p)$.}
 \ifprof
@@ -249,7 +251,7 @@ $$F_1 (p)=\dfrac{\Omega_m (p)}{U(p)} = \dfrac{2\cdot G_1(p)\cdot G_2(p)\cdot G_3
 \else
 \fi
 
-\subsubsection*{On considère que $C_r (p)\neq0$ et $U(p)=0$.}
+\subsubsection{On considère que $C_r (p)\neq0$ et $U(p)=0$.}
 \subparagraph{}
 \textit{Retracer le schéma bloc.}
 \ifprof
@@ -271,7 +273,7 @@ $$F_2 (p)=\dfrac{\Omega_m (p)}{C_r (p)} = -\dfrac{G_3(p)}{1+2\cdot G_1(p)\cdot G
 \else
 \fi
 
-\subsubsection*{On considère que $C_r (p)\neq0$ et $U(p)\neq0$.}
+\subsubsection{On considère que $C_r (p)\neq0$ et $U(p)\neq0$.}
 
 \subparagraph{}
 \textit{Exprimer $\Omega_m(p)$ en fonction de $F_1 (p)$, $F_2 (p)$, $C_r (p)$ et $U(p)$.}
@@ -283,7 +285,7 @@ $$\Omega_m(p) = F_1(p) U(p) + F_2(p) C_r(p)$$
 \else
 \fi
 
-\subsection*{Modélisation des deux moteurs à courant continu}
+\subsection{Modélisation des deux moteurs à courant continu}
 \ifprof
 \else
 \vspace{.25cm}
@@ -353,14 +355,15 @@ Si $\varepsilon (t)=0 \Rightarrow v_c(t)=v(t)$ alors, $ F(p) - \cdot \dfrac{\mu}
 
 \vspace{0.5cm}
 
-On considère que $C_r (p)=0$ et $A\cdot C(p)=1$. On réalise les applications numériques. Le schéma bloc peut alors se mettre sous la forme : 
+On considère que $C_r (p)=0$ et $A\cdot C(p)=C$. On réalise les applications numériques. Le schéma bloc peut alors se mettre sous la forme : 
 $$
-H(p)=\dfrac{V(p)}{V_c (p)}= \dfrac{\dfrac{AK_1}{1+K_1A}}{1+\dfrac{T}{1+K_1A} p}
+H(p)=\dfrac{V(p)}{V_c (p)}= \dfrac{\dfrac{BCDEF}{1+BCD\mu}}{1+\dfrac{T}{1+BCD\mu} p}
 $$
 
-Avec 
-$K_1=0,123 \;\text{SI}$ et $T=0,47\;\text{s}$.
+%Avec 
+%$K_1=0,123 \;\text{SI}$ et $T=0,47\;\text{s}$.
 
+\subsubsection{Réponse indicielle}
 On sollicite le système avec en entrée un échelon unitaire. C’est-à-dire que $v_c(t)$ est un échelon unitaire. 
 
 
@@ -383,7 +386,8 @@ On a donc $V(p)=\dfrac{1}{p}\cdot H(p) $.
 D'après le théorème de la valeur finale, on a : 
 $$
 \lim\limits_{t\to +\infty} v(t)= 
-\lim\limits_{p\to 0} p\cdot V(p)= \dfrac{AK_1}{1+K_1A}
+\lim\limits_{p\to 0} p\cdot V(p)= 
+\dfrac{BCDEF}{1+BCD\mu}
 $$
 \end{corrige}
 \else
@@ -392,26 +396,34 @@ $$
 
 
 \subparagraph{}
-\textit{Si tel n’est pas le cas, calculer $A$ pour que la valeur finale de $v(t)$ soit 1.}
+\textit{Si tel n’est pas le cas, calculer $A$ pour que la valeur finale de $v(t)$ soit 1. Conclure.}
 \ifprof
 \begin{corrige}
-Une valeur finale de 1 permet de satisfaire l'exigence d'avoir un écart statique nul.
 $$
-\dfrac{AK_1}{1+K_1A} = 1 
-\Longleftrightarrow AK_1 = 1+K_1A
-$$
+\dfrac{BCDEF}{1+BCD\mu} = 1 
+\Longleftrightarrow BCDEF = 1+BCD\mu
+\Longleftrightarrow C\left(BDEF - BD\mu \right) = 1
+\Longleftrightarrow C= \dfrac{1}{BDEF - BD\mu}$$
+
+Une valeur finale de 1 permet de satisfaire l'exigence d'avoir un écart statique nul sans perturbation. Il faudrait ensuite vérifier l'écart statique lorsqu'il y a une perturbation pour pouvoir vérifier l'exigence 1.2.1.3.
+
 
 \end{corrige}
 \else
 \fi
 
-On sollicite le système avec une entrée en rampe de pente 1. 
+\subsubsection{Sollicitation du système par une rampe}
+\vspace{.25cm}
+On sollicite le maintenant système avec une entrée en rampe de pente 1. 
 
 \subparagraph{}
-\textit{Montrer que $V(p)$ peut se mettre sous la forme $\dfrac{H(p)}{p^2}$. }
+\textit{Montrer que $V(p)$ peut se mettre sous la forme $\dfrac{H(p)}{p^2}$. \'A quelle comportement cela correspond-il ?}
 \ifprof
 \begin{corrige}
-La fonction de transfert d'une rampe de pente 1 est égale à $V_c(p)=\dfrac{1}{p^2}$
+La fonction de transfert d'une rampe de pente 1 est égale à $V_c(p)=\dfrac{1}{p^2}$.
+On a donc $V(p)=\dfrac{H(p)}{p^2}$.
+
+La sollicitation en rampe correspond ici à l'accélération de la cabine pour aller d'une vitesse nulle à une vitesse définie au préalable.
 \end{corrige}
 \else
 \fi
@@ -419,22 +431,41 @@ La fonction de transfert d'une rampe de pente 1 est égale à $V_c(p)=\dfrac{1}{
 
 
 \subparagraph{}
-\textit{Déterminer la valeur finale, la valeur initiale et la tangente à l’origine de $v(t)$ en fonction de $A$.}
+\textit{Déterminer la valeur finale, la valeur initiale et la tangente à l’origine de $v(t)$ et donner l'allure de la courbe.}
 \ifprof
 \begin{corrige}
+$$V(p) = \dfrac{1}{p^2} \cdot \dfrac{\dfrac{BCDEF}{1+BCD\mu}}{1+\dfrac{T}{1+BCD\mu} p}$$
+\begin{itemize}
+\item Valeur finale : $\lim\limits_{t\to +\infty} v(t)=  \lim\limits_{p\to 0} pV(p)=+\infty$  
+\item Valeur initiale : $\lim\limits_{t\to 0} v(t)=  \lim\limits_{p\to +\infty} pV(p)=0$
+\item Valeur de la pente à l'origine :  $\lim\limits_{t\to 0} \dot{v}(t)=  \lim\limits_{p\to +\infty} p^2V(p)=0$
+\end{itemize}
 \end{corrige}
 \else
 \fi
+
+\vspace{.25cm}
+
+On a :
+$$V(p) = \dfrac{1}{p^2} \cdot \dfrac{1}{1+\tau p}$$
 
 
 \subparagraph{}
 \textit{Mettre $V(p)$ sous la forme suivante : }
 $$
-V(p)=\dfrac{A}{p}+\dfrac{B}{p^2} +\dfrac{C}{...}
+V(p)=\dfrac{A}{p}+\dfrac{B}{p^2} +\dfrac{C}{1+\tau p}
 $$
 
 \ifprof
 \begin{corrige}
+
+En multipliant par $p^2$ et en posant $p=0$ on trouve $B=1$.
+
+En multipliant par $1+\tau p$ et en posant $p=-\dfrac{1}{\tau}$ on trouve $C=\tau^2$.
+
+En $p=1$ on a : $\dfrac{1}{1+\tau} = A+1+\dfrac{\tau^2}{1+\tau} \Longleftrightarrow A = \dfrac{1}{1+\tau}-1-\dfrac{\tau^2}{1+\tau} = -\tau$.
+
+
 \end{corrige}
 \else
 \fi
@@ -445,6 +476,10 @@ $$
 \textit{Déterminer $v(t)$.}
 \ifprof
 \begin{corrige}
+On a donc, $\forall t>0$ : 
+$$
+v(t)=u(t)\cdot \left(-\tau+t+\tau e^{-\dfrac{t}{\tau}}\right)
+$$
 \end{corrige}
 \else
 \fi
