@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.15)  4 DEC 2014 23:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.1.15)  5 DEC 2014 08:30
 entering extended mode
 **02_SLCI_02_ModelisationBlocs_TD_02_TelepheriqueVanoise.tex
 
@@ -1090,184 +1090,260 @@ LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <14.4> not available
 (Font)              Font shape `T1/cmss/bx/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
 (Font)              scaled to size 14.91832pt on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\ot1mdput.fd"
+File: ot1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdput.
+)
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Try loading font information for OML+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omlmdput.fd"
+File: omlmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdput.
+)
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Try loading font information for OMS+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omsmdput.fd"
+File: omsmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdput.
+)
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Try loading font information for OMX+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omxmdput.fd"
+File: omxmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdput.
+)
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Try loading font information for MDA+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdamdput.fd"
+File: mdamdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdput.
+)
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+LaTeX Font Info:    Try loading font information for MDB+mdput on input line 10
+0.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdbmdput.fd"
+File: mdbmdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdput.
+)
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 100.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 100.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 100.
+
+<images/ve.png, id=15, 501.875pt x 770.88pt>
+File: images/ve.png Graphic file (type png)
+ <use images/ve.png>
+Package pdftex.def Info: images/ve.png used on input line 103.
+(pdftex.def)             Requested size: 100.13435pt x 153.79686pt.
+
+<images/uc.png, id=17, 277.035pt x 134.904pt>
+File: images/uc.png Graphic file (type png)
+ <use images/uc.png>
+Package pdftex.def Info: images/uc.png used on input line 109.
+(pdftex.def)             Requested size: 100.13435pt x 48.76096pt.
+
+<images/contexte.png, id=18, 248.6088pt x 206.2104pt>
+File: images/contexte.png Graphic file (type png)
+
+<use images/contexte.png>
+Package pdftex.def Info: images/contexte.png used on input line 116.
+(pdftex.def)             Requested size: 79.04921pt x 65.56703pt.
+
+<images/Exigences.png, id=19, 559.3698pt x 271.7352pt>
+File: images/Exigences.png Graphic file (type png)
+
+<use images/Exigences.png>
+Package pdftex.def Info: images/Exigences.png used on input line 123.
+(pdftex.def)             Requested size: 316.21292pt x 153.61772pt.
+
+<images/Schema_01.png, id=20, 1526.70375pt x 779.91376pt>
+File: images/Schema_01.png Graphic file (type png)
+
+<use images/Schema_01.png>
+Package pdftex.def Info: images/Schema_01.png used on input line 137.
+(pdftex.def)             Requested size: 258.24081pt x 131.91716pt.
+
+<images/Schema_02.png, id=21, 1291.82625pt x 900.36375pt>
+File: images/Schema_02.png Graphic file (type png)
+
+<use images/Schema_02.png>
+Package pdftex.def Info: images/Schema_02.png used on input line 144.
+(pdftex.def)             Requested size: 258.24081pt x 179.98712pt.
+
+<png/logo_ptsi.png, id=22, 384.43625pt x 190.7125pt>
+File: png/logo_ptsi.png Graphic file (type png)
+ <use png/logo_ptsi.png>
+Package pdftex.def Info: png/logo_ptsi.png used on input line 150.
+(pdftex.def)             Requested size: 56.9055pt x 28.22733pt.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
+(Font)              scaled to size 7.52002pt on input line 150.
+LaTeX Font Info:    Font shape `T1/cmss/m/it' will be
+(Font)              scaled to size 8.28796pt on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/m/fsc' will be
+(Font)              scaled to size 7.52002pt on input line 150.
+LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
+(Font)              scaled to size 7.52002pt on input line 150.
+
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+ <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/png/logo_ptsi.png> <
+C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/ve.png> <C:/Ens
+eignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/uc.png> <C:/Enseignem
+ents/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/contexte.png> <C:/Enseignem
+ents/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/Exigences.png>]
 LaTeX Font Info:    Font shape `T1/cmss/m/n' will be
 (Font)              scaled to size 12.43195pt on input line 154.
 LaTeX Font Info:    Font shape `T1/cmss/b/n' in size <12> not available
 (Font)              Font shape `T1/cmss/bx/n' tried instead on input line 154.
 LaTeX Font Info:    Font shape `T1/cmss/bx/n' will be
 (Font)              scaled to size 12.43195pt on input line 154.
-LaTeX Font Info:    Try loading font information for OT1+mdput on input line 21
-1.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 6.58002pt on input line 175.
+LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
+(Font)              scaled to size 4.70001pt on input line 175.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\ot1mdput.fd"
-File: ot1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for OT1/mdput.
-)
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Try loading font information for OML+mdput on input line 21
-1.
+<images/SchemaElectrique.png, id=39, 503.8825pt x 219.82124pt>
+File: images/SchemaElectrique.png Graphic file (type png)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omlmdput.fd"
-File: omlmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OML/mdput.
-)
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Try loading font information for OMS+mdput on input line 21
-1.
+<use images/SchemaElectrique.png>
+Package pdftex.def Info: images/SchemaElectrique.png used on input line 183.
+(pdftex.def)             Requested size: 206.59343pt x 90.12729pt.
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omsmdput.fd"
-File: omsmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMS/mdput.
-)
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Try loading font information for OMX+mdput on input line 21
-1.
+Overfull \hbox (43.4588pt too wide) in paragraph at lines 172--189
+[]\T1/mdput/m/n/10 On note : $[]$ $[]$ 
+ []
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\omxmdput.fd"
-File: omxmdput.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdput.
-)
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Try loading font information for MDA+mdput on input line 21
-1.
+<images/SchemaBloc_01.png, id=40, 1199.48125pt x 193.72375pt>
+File: images/SchemaBloc_01.png Graphic file (type png)
 
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdamdput.fd"
-File: mdamdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDA/mdput.
-)
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Try loading font information for MDB+mdput on input line 21
-1.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\mdbmdput.fd"
-File: mdbmdput.fd 2013/08/29 Fontinst v1.933 font definitions for MDB/mdput.
-)
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 9.40002pt on input line 211.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 211.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 211.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 11.28003pt on input line 243.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 243.
-LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
-(Font)              scaled to size 5.64001pt on input line 243.
-
-<png/logo_ptsi.png, id=15, 384.43625pt x 190.7125pt>
+<use images/SchemaBloc_01.png>
+Package pdftex.def Info: images/SchemaBloc_01.png used on input line 223.
+(pdftex.def)             Requested size: 474.31134pt x 76.60428pt.
 File: png/logo_ptsi.png Graphic file (type png)
  <use png/logo_ptsi.png>
-Package pdftex.def Info: png/logo_ptsi.png used on input line 259.
+Package pdftex.def Info: png/logo_ptsi.png used on input line 224.
 (pdftex.def)             Requested size: 56.9055pt x 28.22733pt.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 7.52002pt on input line 259.
-LaTeX Font Info:    Font shape `T1/mdput/m/it' will be
-(Font)              scaled to size 7.52002pt on input line 259.
-LaTeX Font Info:    Font shape `T1/cmss/m/it' will be
-(Font)              scaled to size 8.28796pt on input line 259.
-LaTeX Font Info:    Font shape `T1/mdput/m/fsc' will be
-(Font)              scaled to size 7.52002pt on input line 259.
-LaTeX Font Info:    Font shape `T1/mdput/b/n' will be
-(Font)              scaled to size 7.52002pt on input line 259.
+ [2 <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/Schema_01.
+png> <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/Schema_02
+.png> <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/SchemaEl
+ectrique.png>]
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `OT1/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/it' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `OMS/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `OMX/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `OML/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `MDA/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 11.28003pt on input line 243.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 7.52002pt on input line 243.
+LaTeX Font Info:    Font shape `MDB/mdput/m/n' will be
+(Font)              scaled to size 5.64001pt on input line 243.
+LaTeX Font Info:    Try loading font information for TS1+mdput on input line 29
+6.
 
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+("C:\Program Files\MiKTeX 2.9\tex\latex\mathdesign\mdput\ts1mdput.fd"
+File: ts1mdput.fd 2013/08/29 Fontinst v1.933 font definitions for TS1/mdput.
+)
+LaTeX Font Info:    Font shape `TS1/mdput/m/n' will be
+(Font)              scaled to size 9.40002pt on input line 296.
 
- <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/png/logo_ptsi.png>]
-<images/corr_01.png, id=45, 752.8125pt x 182.6825pt>
-File: images/corr_01.png Graphic file (type png)
- <use images/corr_01.png>
-Package pdftex.def Info: images/corr_01.png used on input line 260.
-(pdftex.def)             Requested size: 227.62204pt x 55.23723pt.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 6.58002pt on input line 329.
-LaTeX Font Info:    Font shape `T1/mdput/m/n' will be
-(Font)              scaled to size 4.70001pt on input line 329.
+<images/SchemaBloc_02.png, id=55, 832.10875pt x 176.66pt>
+File: images/SchemaBloc_02.png Graphic file (type png)
 
-<images/corr_02.png, id=46, 1311.90125pt x 195.73125pt>
-File: images/corr_02.png Graphic file (type png)
+<use images/SchemaBloc_02.png>
+Package pdftex.def Info: images/SchemaBloc_02.png used on input line 303.
+(pdftex.def)             Requested size: 279.84193pt x 59.41125pt.
 
-<use images/corr_02.png>
-Package pdftex.def Info: images/corr_02.png used on input line 343.
-(pdftex.def)             Requested size: 398.33858pt x 59.43063pt.
+<images/SchemaBloc_03.png, id=56, 1311.90125pt x 227.85126pt>
+File: images/SchemaBloc_03.png Graphic file (type png)
+
+<use images/SchemaBloc_03.png>
+Package pdftex.def Info: images/SchemaBloc_03.png used on input line 312.
+(pdftex.def)             Requested size: 527.01619pt x 91.53175pt.
 File: png/logo_ptsi.png Graphic file (type png)
  <use png/logo_ptsi.png>
-Package pdftex.def Info: png/logo_ptsi.png used on input line 361.
+Package pdftex.def Info: png/logo_ptsi.png used on input line 357.
 (pdftex.def)             Requested size: 56.9055pt x 28.22733pt.
- [2 <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/corr_01.pn
-g> <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/corr_02.png
->]
-File: png/logo_ptsi.png Graphic file (type png)
- <use png/logo_ptsi.png>
-Package pdftex.def Info: png/logo_ptsi.png used on input line 443.
-(pdftex.def)             Requested size: 56.9055pt x 28.22733pt.
-
-[3]
+ [3 <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/SchemaBloc
+_01.png> <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/Schem
+aBloc_02.png> <C:/Enseignements/GitHub/DM_DS/2014_2015/DS_07/LaTeX_2014/images/
+SchemaBloc_03.png>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 491.
 File: png/logo_ptsi.png Graphic file (type png)
- <use png/logo_ptsi.png>
+
+<use png/logo_ptsi.png>
 Package pdftex.def Info: png/logo_ptsi.png used on input line 491.
 (pdftex.def)             Requested size: 56.9055pt x 28.22733pt.
  [4]
@@ -1283,13 +1359,13 @@ queVanoise.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 491.
  ) 
 Here is how much of TeX's memory you used:
- 12461 strings out of 493921
- 176986 string characters out of 3147279
- 301439 words of memory out of 3000000
- 15441 multiletter control sequences out of 15000+200000
- 147271 words of font info for 116 fonts, out of 3000000 for 9000
+ 12520 strings out of 493921
+ 178381 string characters out of 3147279
+ 300439 words of memory out of 3000000
+ 15496 multiletter control sequences out of 15000+200000
+ 148037 words of font info for 119 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,18n,72p,679b,473s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,17n,72p,696b,499s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\Xavier\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi622
 \ecsx1200.pk> <C:\Users\Xavier\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappe
 n\ec\dpi622\ecsx1440.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/t
@@ -1298,16 +1374,15 @@ exnansi.enc} <C:\Users\Xavier\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen
 ur\jknappen\ec\dpi622\ecsi0800.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/math
 design/mdput/md-utr7m.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/m
 dput/md-utr7t.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-
-utr7v.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr7y.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr8t.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-adobe/utopia/putri8a.pfb>
+utr7y.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utr8t.pf
+b><C:/Program Files/MiKTeX 2.9/fonts/type1/mathdesign/mdput/md-utri7m.pfb><C:/P
+rogram Files/MiKTeX 2.9/fonts/type1/adobe/utopia/putb8a.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/adobe/utopia/putr8a.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/adobe/utopia/putri8a.pfb>
 Output written on 02_SLCI_02_ModelisationBlocs_TD_02_TelepheriqueVanoise.pdf (4
- pages, 206564 bytes).
+ pages, 1327323 bytes).
 PDF statistics:
- 204 PDF objects out of 1000 (max. 8388607)
- 36 named destinations out of 1000 (max. 500000)
- 40 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 209 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 80 words of extra memory for PDF output out of 10000 (max. 10000000)
 
